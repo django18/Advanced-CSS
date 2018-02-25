@@ -1,0 +1,23 @@
+{
+  "name": "hustle",
+  "version": "1.0.0",
+  "description": "Gym website using scss",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass":"node-sass styles/scss/main.scss styles/css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/django18/Hustle__Advance-CSS-Project.git"
+  },
+  "author": "Avinash",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/django18/Hustle__Advance-CSS-Project/issues"
+  },
+  "homepage": "https://github.com/django18/Hustle__Advance-CSS-Project#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
