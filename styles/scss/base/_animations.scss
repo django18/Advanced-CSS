@@ -1,0 +1,28 @@
+@keyframes slideInLeft{
+    0%{
+        transform: translateX(-10rem);
+        opacity: 0;
+    }
+
+    50%{
+       transform: translateX(1rem);
+       opacity: 0.5;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInBottom{
+    0%{
+        transform: translateY(3rem);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translate(0);
+        opacity: 1;
+    }
+}
