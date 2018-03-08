@@ -77,14 +77,14 @@ body {
     transform: scale3d(1.1, 1.1, 2); }
 
 .heading-tertiary {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 1.6;
   text-transform: uppercase; }
 
 .paragraph {
   font-size: 1.6rem;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.2; }
   .paragraph:not(:last-child) {
     margin-bottom: 2rem; }
@@ -104,7 +104,18 @@ body {
 .section-about {
   background: #f7f5f9;
   padding-top: 25vh;
+  padding-bottom: 50vh;
   margin: -20vh auto; }
+
+.section-feature {
+  background-image: linear-gradient(to right top, rgba(0, 200, 83, 0.8), rgba(178, 255, 89, 0.5)), url("../../imgs/gym-girl.jpg");
+  height: 100vh;
+  padding: 15rem 0;
+  background-size: cover;
+  background-position: center;
+  transform: skewY(-7deg); }
+  .section-feature > * {
+    transform: skewY(7deg); }
 
 .btn::after {
   content: "";
@@ -155,7 +166,8 @@ body {
     position: absolute;
     transition: all .1s;
     z-index: 10;
-    outline-offset: 1rem; }
+    outline-offset: 1rem;
+    box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.5); }
     .collection__photos--p1 {
       left: 0;
       top: -2rem; }
@@ -170,6 +182,27 @@ body {
       z-index: 20; }
   .collection:hover .collection__photos:not(:hover) {
     transform: scale(0.95); }
+
+.feature-card {
+  background-color: rgba(235, 235, 235, 0.9);
+  margin: 0.5rem;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.5rem;
+  box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.4);
+  min-height: 25rem;
+  transition: all .4s; }
+  .feature-card__text {
+    line-height: 1.1; }
+  .feature-card__icon {
+    font-size: 6rem;
+    background-image: linear-gradient(to left top, #00E676, #B2FF59);
+    -webkit-background-clip: text;
+    background-clip: text;
+    display: inline-block;
+    color: transparent; }
+  .feature-card:hover {
+    transform: scaleX(1.05) scaleY(1.1); }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(0, 230, 118, 0.8), rgba(0, 200, 83, 0.6)), url(../../imgs/pexels-photo-116078.jpeg);
@@ -194,7 +227,7 @@ body {
 
 .row {
   display: block;
-  max-width: 114rem;
+  max-width: 105rem;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
