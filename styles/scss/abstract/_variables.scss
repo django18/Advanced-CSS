@@ -2,11 +2,25 @@
 $primary-color:#00E676;
 $primary-color-light:#B2FF59;
 $primary-color-dark:#00C853;
+
+$secondary-color-light:#FF5F6D;
+$secondary-color-dark:#FFC371;
+
+$tertiary-color-light:#004e92;
+$tertiary-color-dark:#000428;
+
 $about-section-color:#f7f5f9;
 $feature-card-color:rgb(247, 243, 243);
 
 $text-color-gray-dark:#777;
 $text-color-gray-light:rgb(235, 235, 235);
+
+$shadow-color:rgba($text-color-gray-dark,.5);
+
+$color-white:rgb(255, 255, 255);
+
+//Shadow
+$box-shadow-card:0 1.5rem 4rem $shadow-color;
 
 
 //Fonts

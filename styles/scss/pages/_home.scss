@@ -16,7 +16,14 @@
 
     transform: skewY(-7deg);
 
+    //Select 'all direct children' of parent selector
     & > *{
         transform: skewY(7deg); 
     }
+}
+
+.section-price{
+    @extend .section-about;
+    padding-top: 50vh;
+    padding-bottom: 15vh;
 }

@@ -47,6 +47,11 @@
         background-color: $text-color-gray-light;
         color: $text-color-gray-dark;
     }
+
+    &--green{
+        background-color: $primary-color;
+        color: $color-white;
+    }
     
     &--animated{
         animation: slideInBottom 1s ease-out 0.75s;

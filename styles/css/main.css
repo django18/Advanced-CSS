@@ -101,7 +101,13 @@ body {
 .mb-medium {
   margin-bottom: 8rem; }
 
-.section-about {
+.mt-medium {
+  margin-top: 8rem; }
+
+.mt-huge {
+  margin-top: 10rem; }
+
+.section-about, .section-price {
   background: #f7f5f9;
   padding-top: 25vh;
   padding-bottom: 50vh;
@@ -116,6 +122,10 @@ body {
   transform: skewY(-7deg); }
   .section-feature > * {
     transform: skewY(7deg); }
+
+.section-price {
+  padding-top: 50vh;
+  padding-bottom: 15vh; }
 
 .btn::after {
   content: "";
@@ -155,6 +165,10 @@ body {
   background-color: #ebebeb;
   color: #777; }
 
+.btn--green {
+  background-color: #00E676;
+  color: white; }
+
 .btn--animated {
   animation: slideInBottom 1s ease-out 0.75s;
   animation-fill-mode: backwards; }
@@ -183,7 +197,7 @@ body {
   .collection:hover .collection__photos:not(:hover) {
     transform: scale(0.95); }
 
-.feature-card {
+.feature-box {
   background-color: rgba(235, 235, 235, 0.9);
   margin: 0.5rem;
   text-align: center;
@@ -192,17 +206,99 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.4);
   min-height: 25rem;
   transition: all .4s; }
-  .feature-card__text {
+  .feature-box__text {
     line-height: 1.1; }
-  .feature-card__icon {
+  .feature-box__icon {
     font-size: 6rem;
     background-image: linear-gradient(to left top, #00E676, #B2FF59);
     -webkit-background-clip: text;
     background-clip: text;
     display: inline-block;
     color: transparent; }
-  .feature-card:hover {
+  .feature-box:hover {
     transform: scaleX(1.05) scaleY(1.1); }
+
+.card {
+  perspective: 150rem;
+  -webkit-perspective: 150rem;
+  height: 45rem; }
+  .card__side {
+    height: 45rem;
+    transition: all .4s ease;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    box-shadow: 0 1.5rem 4rem rgba(119, 119, 119, 0.5);
+    border-radius: 3px; }
+    .card__side--front {
+      background-color: white; }
+    .card__side--back {
+      transform: rotateY(180deg); }
+      .card__side--back--1 {
+        background-image: linear-gradient(to right bottom, #004e92, #000428); }
+      .card__side--back--2 {
+        background-image: linear-gradient(to right bottom, #B2FF59, #00C853); }
+      .card__side--back--3 {
+        background-image: linear-gradient(to right bottom, #FF5F6D, #FFC371); }
+  .card:hover .card__side--front {
+    transform: rotateY(-180deg); }
+  .card:hover .card__side--back {
+    transform: rotateY(0); }
+  .card__picture {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode: color;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+    .card__picture--1 {
+      background-image: linear-gradient(to right bottom, #004e92, #000428), url("../../imgs/img1-large.jpg"); }
+    .card__picture--2 {
+      background-image: linear-gradient(to right bottom, #B2FF59, #00C853), url("../../imgs/img2-large.jpg"); }
+    .card__picture--3 {
+      background-image: linear-gradient(to right bottom, #FF5F6D, #FFC371), url("../../imgs/img3-large.jpg"); }
+  .card__heading {
+    font-size: 2rem;
+    color: white;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 17rem;
+    right: 2rem;
+    border-radius: 5px; }
+    .card__heading--1 {
+      background-image: linear-gradient(to right bottom, #004e92, #000428); }
+    .card__heading--2 {
+      background-image: linear-gradient(to right bottom, #B2FF59, #00C853); }
+    .card__heading--3 {
+      background-image: linear-gradient(to right bottom, #FF5F6D, #FFC371); }
+  .card__details {
+    padding: 1.5rem 0; }
+    .card__details ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center; }
+      .card__details ul li {
+        color: #777;
+        padding: .5rem .2rem; }
+        .card__details ul li:not(:last-child) {
+          border-bottom: 1px solid #ebebeb; }
+  .card__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    padding: 2.5rem 1rem; }
+  .card__price {
+    text-transform: uppercase;
+    color: white;
+    margin: 3rem 0; }
+    .card__price h1 {
+      font-size: 6rem;
+      font-weight: 100; }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(0, 230, 118, 0.8), rgba(0, 200, 83, 0.6)), url(../../imgs/pexels-photo-116078.jpeg);
